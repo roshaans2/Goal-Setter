@@ -4,6 +4,10 @@ const port = process.env.PORT
 
 const app = express()
 
+const goalRouter = require("./routes/goalRoutes")
+
+app.use("/api/goals/",goalRouter)
+
 app.listen(port,()=>{
     console.log(`Server started at port ${port}`)
 })
